@@ -1,0 +1,126 @@
+Need to know things:
+1.Maven
+2.
+
+Edureka devops training :
+
+github details:
+username: ajayvarma007
+token: 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
+url: https://github.com/ajayvarma007/edureka.git
+
+connecting to the vm using powershell:
+ssh -i /path/key-pair-name.pem instance-user-name@instance-public-dns-name
+ssh -i edureka1.pem ubuntu@ec2-13-234-116-3.ap-south-1.compute.amazonaws.com
+
+installing git:
+1. sudo apt update
+2. sudo apt install git
+3. git --version
+
+setting up git:
+git config --global user.name "ajayvarma007"
+git config --global user.email "buddharajuajayvarma@gmail.com"
+
+
+mkdir git
+cd git
+git init
+git clone url
+git branch (to check currently we are in which branch)
+git branch branch1 (creating new branch)
+git checkout branch1 (switching to new branch)
+vi file1.txt (creating new file) 
+i (to insert data)
+esc key + :wq! (to save and quit the file)
+git status (to check currently tracked and untracked files in the branch)
+git commit -m "file1.txt added" (committing with commit msg)
+git push origin branch1 ( pushing the code to remote repo)
+git checkout main
+git fetch
+git pull
+rm git\ branchname
+touch filename1 filename2 (to create empty files)
+git add . ( add all files into the branch)
+
+vi .gitignore( gitignore -> ignores any mentioned file or any mentioned specific file type // (.)this will be a hidden file):
+
+*.py (ignores all the python files and cannot be added to staged nor committed)
+
+
+esc + :wq!
+
+
+git pull
+
+------------------------------------------------------------------------------------------------------------
+
+merging and resolve conflits of git in the remote repository
+
+-------------------------------------------------------------------------------------------
+
+git rebase branch1 branch2 ( it pulls and copies/syncs all the files present in branch1 to branch2)
+
+git stash (temporarily removing the current change done in a branch)
+git stash list ( shows the stashed changes in the branch)
+git stash apply ( reverts back the stashed changes and applies it back to the branch)
+
+git log ( gives logs with commit msg's)
+
+git revert commitID ( reverts the git branch and removes the specific commit done. i.e., we can use this cmd when we mess up and added/saved some part of code in the branch which is not required)
+git reset --hard (it is a Git command used to reset the current branch to a previous commit, discarding any local changes and modifications made to the files)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Apache maven: 
+
+Project Object Model. The pom. xml file contains information of project and configuration information for the maven to build the project such as dependencies, build directory, source directory, test source directory, plugin, goals etc. Maven reads the pom
+
+----------------------
+
+installing java:
+
+sudo apt update
+wget tar download url
+unzip the tar file
+
+for sample maven project building refer it from the offical maven documentation and follow as is -- pretty simple)
+maven 3 important topics:
+1. groupId
+2. AtrifactId
+3. Version
+
+-------------------------
+
+installing tree software ( for grapical representation of foler directories in linux): sudo apt install tree
+
+tree command (depicts grapical representation of foler directories in linux)
+
+
+mvn package ( builds the maven project)
+
+
+Continous Integration (CI): automating the code building and running the automatic tests for the code before deploying it into the test/staging/Prod env's.
+
+eg: Jenkins (popular CI tool)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Jenkins setup through Docker: docker run -d -v jenkins_home:/var/jenkins_home -p 8081:8080 -p 50000:50000 --restart=on-failure jenkins/jenkins:latest 
+
+--> sudo chmod 666 /var/run/docker.sock (use this cmd to resolve permission denied error for accessing the docker cmd's according to the file path)
+--> docker ps (command only shows running containers by default)
+--> docker ps -a(command To see all containers)
+
+--> ip a ( cmd to view private IP in our terminal)
+
+
+
+
+
+
+
+
+
+
+
